@@ -2,13 +2,12 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-from app.database import SessionLocal, get_db
-from app.models import ConflictData, User, UserFeedback
+from app.database import SessionLocal
+from app.models import ConflictData
 
-from sqlalchemy import func
+import csv
 from sqlalchemy.orm import Session
 from typing import Type
-import csv
 
 def truncate_table(model: Type, db: Session = SessionLocal()) -> None:
     '''

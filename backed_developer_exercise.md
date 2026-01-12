@@ -35,8 +35,7 @@ Use the details below to guide you in building an API for a conflict monitoring 
     - [x] Transaction use where appropriate
     - [x] Prevent SQL injection
 ## Submission materials
-<!-- TODO -->
-- [ ] Git repo link
+- [x] Git repo link
 - [x] Setup instructions (README file)
 - [x] API documentation (OpenAPI or markdown) including:
     - [x] Endpoint descriptions

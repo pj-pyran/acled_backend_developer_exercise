@@ -1,6 +1,5 @@
 import logging
 logger = logging.getLogger(__name__)
-logger.info('message')
 
 from app.database import engine
 from app.models import Base

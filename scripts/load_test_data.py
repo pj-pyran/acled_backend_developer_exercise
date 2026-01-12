@@ -1,9 +1,9 @@
 import logging
 logger = logging.getLogger(__name__)
 
+from app.auth import hash_password
 from app.database import SessionLocal
 from app.models import User, ConflictData
-from app.auth import hash_password
 from app.utils.sql_utils import truncate_table
 
 import csv
