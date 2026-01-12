@@ -1,6 +1,6 @@
-bcrypt==4.3.0
+bcrypt==3.2.2
 fastapi
-passlib[bcrypt]>=1.7.4
+passlib[bcrypt]
 psycopg2-binary
 pydantic[email]
 python-jose[cryptography]
