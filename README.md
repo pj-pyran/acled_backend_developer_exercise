@@ -14,30 +14,37 @@ Sourced from ACLED - see [website](https://acleddata.com/conflict-data) for furt
 ### Installation
 
 1. Clone the repository (alternatively visit [github.com/pj-pyran/acled_backend_developer_exercise](https://github.com/pj-pyran/acled_backend_developer_exercise)):
+
     ```bash
     git clone https://github.com/pj-pyran/acled_backend_developer_exercise.git
     cd acled_backend_developer_exercise
     ```
-2. Create and activate virtual environment:
+2. Create and activate virtual environment, install dependencies:
+    
+    **macOS/Linux**
     ```bash
-    python -m venv .venv
-    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-    ``` 
-3. Install dependencies:
-    ```bash
+    python3 -m venv .venv
+    source .venv/bin/activate
     pip install -r requirements.txt
     ```
-4. Initialise the DB (SQLite) and load sample data:
+
+    **Windows**
+    ```bash
+    python -m venv .venv
+    .venv\Scripts\activate
+    pip install -r requirements.txt
+    ``` 
+3. Initialise the DB (SQLite) and load sample data:
     ```bash
     python -m app.init_db
     python -m scripts.load_test_data
     ```
     Test data includes the provided `sample_data.csv` and 2 users including one admin user.
-5. Run the application:
+4. Run the application:
     ```bash
     uvicorn app.main:app --reload
     ```
-6. Access the API:
+5. Access the API:
     * API: http://127.0.0.1:8000
     * OpenAPI interactive docs: http://127.0.0.1:8000/docs. You may test all endpoints here.
 
