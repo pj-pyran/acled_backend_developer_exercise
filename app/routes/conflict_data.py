@@ -60,7 +60,6 @@ def get_conflict_data(
         .limit(page_size).all()
     ## Total number of pages in dataset
     total_pages = math.ceil(row_count / page_size)
-    logger.debug(f'returning {len(query_result)} \n\n {[item for item in query_result]}')
     return {
         'rows_returned': row_count, 'offset': offset, 'page_size': page_size, 'total_pages': total_pages,
         'items': [
