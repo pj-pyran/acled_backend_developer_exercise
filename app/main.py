@@ -14,9 +14,6 @@ router_prefix = '/v1'
 app.include_router(auth.router, prefix=router_prefix)
 app.include_router(conflict_data.router, prefix=router_prefix)
 
-print('\n\n\n')
-
-
 if __name__ == '__main__':
     import uvicorn
     uvicorn.run(app, host='127.0.0.1', port=8000)
