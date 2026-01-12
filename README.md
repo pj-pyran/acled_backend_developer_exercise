@@ -1,4 +1,4 @@
-# acled_backend_developer_exercise
+# ACLED Backend Developer take-home exercise
 API framework for a conflict monitoring platform. Endpoints allow access to statistics at level of country region/state/province. Statstics include region population, number of conflict events, and a conflict risk score at regional level or averaged over the whole country.
 
 Authenticated users may also provide feedback on the regional-level data.
