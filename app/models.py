@@ -2,11 +2,12 @@ import logging
 logger = logging.getLogger(__name__)
 
 '''SQLAlchemy ORM models'''
-from sqlalchemy import Column, Integer, String, Float, ForeignKey, DateTime, Text, Index, UniqueConstraint, Boolean
+from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Index, Boolean
 from sqlalchemy.orm import relationship
-from sqlalchemy.sql import func
-from datetime import datetime
+
 from app.database import Base
+
+from datetime import datetime
 
 
 class ConflictData(Base):

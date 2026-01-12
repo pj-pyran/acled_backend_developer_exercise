@@ -1,15 +1,10 @@
 import logging
 logger = logging.getLogger(__name__)
 
-'''Minimal conflict data and feedback routes'''
-from fastapi import APIRouter, Depends, HTTPException, Query
+from app.models import ConflictData
+
 from sqlalchemy import func
 from sqlalchemy.orm import Session
-from typing import Union, List
-
-from app.database import get_db
-from app.models import ConflictData, UserFeedback
-
 
 # Add this after your compute_risk_score_average function
 def compute_cache_risk_score_avg(country: str, cache: dict, db: Session):

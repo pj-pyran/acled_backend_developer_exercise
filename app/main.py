@@ -4,9 +4,7 @@ configure_logging()
 from fastapi import FastAPI
 from fastapi.security import HTTPBearer
 
-from app.database import engine, Base
 from app.routes import auth, conflict_data
-from scripts.depr_dummy_inserts import insert_dummies, delete_dummies, select_all
 
 app = FastAPI(title='ACLED Conflict API', version='1.0.0')
 

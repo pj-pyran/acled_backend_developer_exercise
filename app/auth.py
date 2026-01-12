@@ -1,17 +1,17 @@
 import logging
 logger = logging.getLogger(__name__)
 
-import os
-from datetime import datetime, timedelta
-from typing import Optional
-
-from jose import jwt, JWTError
-from passlib.context import CryptContext
 from fastapi import Depends, HTTPException, status, Request
 from sqlalchemy.orm import Session
 
 from app.models import User
 from app.database import get_db
+
+from datetime import datetime, timedelta
+from jose import jwt, JWTError
+from passlib.context import CryptContext
+import os
+from typing import Optional
 
 # Config (keep simple)
 SECRET_KEY = os.getenv('SECRET_KEY', 'dev-secret')

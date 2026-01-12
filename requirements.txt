@@ -1,8 +1,8 @@
-fastapi
-python-jose[cryptography]
 bcrypt==4.3.0
+fastapi
+passlib
 psycopg2-binary
+pydantic[email]
+python-jose[cryptography]
 sqlalchemy
 uvicorn
-passlib
-pydantic[email]

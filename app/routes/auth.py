@@ -2,8 +2,8 @@ import logging
 logger = logging.getLogger(__name__)
 
 from fastapi import APIRouter, Depends, HTTPException, status
-from sqlalchemy.orm import Session
 from fastapi.security import HTTPBearer
+from sqlalchemy.orm import Session
 
 from app.database import get_db
 from app.models import User
