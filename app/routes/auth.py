@@ -48,13 +48,3 @@ def me(current_user: User = Depends(get_current_user), credentials: HTTPBearer =
     If token is valid, returns information of the current user.
     '''
     return {'id': current_user.id, 'email': current_user.email, 'is_admin': current_user.is_admin}
-
-# Unused endpoint
-# @router.get('/test_admin_access')
-# def test_admin_access(current_user: User = Depends(get_current_user)):
-#     '''Endpoint to test admin access.
-#     Raises 403 if the current user is not an admin.
-#     '''
-#     if not current_user.is_admin:
-#         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail='admin access required')
-#     return {'detail': 'admin access granted'}

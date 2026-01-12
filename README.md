@@ -51,40 +51,40 @@ Sourced from ACLED - see [website](https://acleddata.com/conflict-data) for furt
 ## curl samples
 1. Register
     ```curl
-    curl -X POST "http://127.0.0.1:8000/api/v1/auth/register" \
+    curl -X POST "http://127.0.0.1:8000/v1/auth/register" \
     -H "Content-Type: application/json" \
     -d '{"email": "user2@test.com", "password": "password123"}'
     ```
 2. Login
     ```curl
-    curl -X POST "http://127.0.0.1:8000/api/v1/auth/login" \
+    curl -X POST "http://127.0.0.1:8000/v1/auth/login" \
     -H "Content-Type: application/json" \
     -d '{"email": "user2@test.com", "password": "password123"}'
     ```
 3. Get conflict data (paginated)
     ```curl
-    curl "http://127.0.0.1:8000/api/v1/conflictdata?offset=0&page_size=20"
+    curl "http://127.0.0.1:8000/v1/conflictdata?offset=0&page_size=20"
     ```
 4. Get conflict data by country
     ```curl
-    curl "http://127.0.0.1:8000/api/v1/conflictdata/Nigeria"
+    curl "http://127.0.0.1:8000/v1/conflictdata/South%20Africa"
     ```
 5. Get risk score average
     ```curl
-    curl "http://127.0.0.1:8000/api/v1/conflictdata/Nigeria/riskscore"
+    curl "http://127.0.0.1:8000/v1/conflictdata/South%20Africa/riskscore"
     ```
     If a `202` response is received, wait a few seconds and send the request again for a `200`.
 
 6. Post feedback (authenticated)
     ```curl
     # Login and capture token
-    TOKEN=$(curl -X POST "http://127.0.0.1:8000/api/v1/auth/login" \
+    TOKEN=$(curl -X POST "http://127.0.0.1:8000/v1/auth/login" \
     -H "Content-Type: application/json" \
     -d '{"email": "user2@test.com", "password": "password123"}' \
     | jq -r '.access_token')
 
     # Call endpoint
-    curl -X POST "http://127.0.0.1:8000/api/v1/conflictdata/Lagos/userfeedback?country=Nigeria" \
+    curl -X POST "http://127.0.0.1:8000/v1/conflictdata/Eastern%20Cape/userfeedback?country=South%20Africa" \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer $TOKEN" \
     -d '{"feedback_text": "This is my feedback about the region."}'
@@ -92,13 +92,13 @@ Sourced from ACLED - see [website](https://acleddata.com/conflict-data) for furt
 7. Delete entry (admin only)
     ```curl
     # Login and capture token
-    TOKEN=$(curl -X POST "http://127.0.0.1:8000/api/v1/auth/login" \
+    TOKEN=$(curl -X POST "http://127.0.0.1:8000/v1/auth/login" \
     -H "Content-Type: application/json" \
     -d '{"email": "user2@test.com", "password": "password123"}' \
     | jq -r '.access_token')
 
     # Call endpoint
-    curl -X DELETE "http://127.0.0.1:8000/api/v1/conflictdata?admin1=Lagos&country=Nigeria" \
+    curl -X DELETE "http://127.0.0.1:8000/v1/conflictdata?admin1=Eastern%20Cape&country=South%20Africa" \
     -H "Authorization: Bearer $TOKEN"
     ```
 
