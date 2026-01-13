@@ -1,4 +1,4 @@
-# ACLED Backend Developer take-home exercise
+# ACLED Conflict monitoring API platform
 API framework for a conflict monitoring platform. Endpoints allow access to statistics at level of country region/state/province. Statistics include region population, number of conflict events, and a conflict risk score at regional level or averaged over the whole country.
 
 Authenticated users may also provide feedback on the regional-level data.
@@ -120,7 +120,6 @@ We use SQLAlchemy ORM throughout, which uses parameterised queries. We don't con
 ## FastAPI
 1. Forced schema definitions - better control, fewer bugs
 2. Auto-generated API docs using Swagger
-3. Plays w
 
 Flask would give quicker/easier start-up due to not needing schema definitions. However a more defined structure will pay off in the longer run and make testing easier
 
