@@ -13,7 +13,7 @@ Sourced from ACLED - see [website](https://acleddata.com/conflict-data) for furt
 
 ### Installation
 
-1. Clone the repository (alternatively visit [github.com/pj-pyran/acled_backend_developer_exercise](https://github.com/pj-pyran/acled_backend_developer_exercise)):
+1. Clone the repository (alternatively visit [github repo here](https://github.com/pj-pyran/acled_backend_developer_exercise)):
 
     ```bash
     git clone https://github.com/pj-pyran/acled_backend_developer_exercise.git
